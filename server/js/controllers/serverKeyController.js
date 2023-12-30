@@ -4,7 +4,7 @@ const { getAccessTokenForServer } = require('../firebaseAuth.js');
 const generateServerKeyToken = (req, res, next) => {
     getAccessTokenForServer()
         .then((token) => {
-            console.log('serverKeyToken ', token);
+            // console.log('serverKeyToken ', token);
             res.send({"serverKeyToken": token});
         })
         .catch(err => {

@@ -23,7 +23,7 @@ class Work {
 
         getAccessTokenForServer()
             .then((serverKeyToken) => {
-                console.log('serverKeyToken ', serverKeyToken);
+                // console.log('serverKeyToken ', serverKeyToken);
                 const options = {
                     "method": "POST",
                     "headers": {
@@ -41,7 +41,7 @@ class Work {
                     })
                 }
         
-                console.log('options ', options);
+                // console.log('options ', options);
         
                 fetch('https://fcm.googleapis.com/v1/projects/work-notifications-edc6e/messages:send', options)
                     .then(resp => {
